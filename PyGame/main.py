@@ -35,8 +35,8 @@ while run:
     screen.fill((255, 255, 255))
 
     for i in range(100):
-        pygame.draw.line(screen, (0, 0, 0), (i * 6 + x, 0 + y), (i * 6 + x, 99 * 6 + y))
-        pygame.draw.line(screen, (0, 0, 0), (0 + x, i * 6 + y), (99 * 6 + x, i * 6 + y))
+        pygame.draw.line(screen, (0, 0, 0), (i * 6 + x, 0 + y), (i * 6 + x, 100 * 6 + y))
+        pygame.draw.line(screen, (0, 0, 0), (0 + x, i * 6 + y), (100 * 6 + x, i * 6 + y))
 
         for l in range(100):
             match matrix[i][l]:
@@ -62,6 +62,9 @@ while run:
                     color = (160, 66, 90)
 
             pygame.draw.rect(screen, color, pygame.Rect(i * 6 + x + 1, l * 6 + y + 1, 5, 5))
+
+    pygame.draw.line(screen, (0, 0, 0), (100 * 6 + x, 0 + y), (100 * 6 + x, 100 * 6 + y))
+    pygame.draw.line(screen, (0, 0, 0), (0 + x, 100 * 6 + y), (100 * 6 + x, 100 * 6 + y))
 
 
     # if is_blue:
